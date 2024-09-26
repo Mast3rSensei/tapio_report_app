@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapio Carbon Footprint Resolution Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            padding: 14px 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+            color: white;
+        }
+
+        /* Style for the scorecards */
+        .scorecards {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .scorecard {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 30%; /* Each scorecard takes up 30% of the available space */
+        }
+
+        .scorecard h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .scorecard p {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Tapio Carbon Footprint Resolution Tool
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#report">Report</a></li>
+            <li><a href="#capital-goods">Capital Goods</a></li>
+        </ul>
+    </nav>
+
+    <section id="report">
+        <h2>Report Section</h2>
+        <p>Here you can generate and view carbon footprint reports.</p>
+
+        <div class="scorecards">
+            <!-- Scorecard 1: Value of Reference -->
+            <div class="scorecard">
+                <h3>Value of Reference</h3>
+                <p>{{ report.objects().sum() }}</p>
+            </div>
+
+            <!-- Scorecard 2: Reduction Strategy -->
+            <div class="scorecard">
+                <h3>Reduction Strategy</h3>
+                <p>Information about the strategies to reduce carbon emissions.</p>
+            </div>
+
+            <!-- Scorecard 3: Total Reduction -->
+            <div class="scorecard">
+                <h3>Total Reduction</h3>
+                <p>Total reduction of carbon emissions over time.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="capital-goods">
+        <h2>Capital Goods Section</h2>
+        <p>This section helps track carbon impacts associated with capital goods.</p>
+    </section>
+
+</body>
+</html>
